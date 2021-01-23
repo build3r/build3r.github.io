@@ -35,9 +35,9 @@ remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum" "sunrise"
 plugins:
   - jekyll-include-cache
-  - jekyll-seo-tag
+  
 # SEO Related //TODO
-google_site_verification :
+google_site_verification : "Zxr-00iqMLjTfowdM9PFlQr3dQGOVhYMko6bZWsyDfo"
 bing_site_verification   :
 yandex_site_verification :
 kramdown:

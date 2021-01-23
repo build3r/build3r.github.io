@@ -4,8 +4,8 @@ title:  "Switching On a local/remote PC via terminal"
 date:   2021-01-23 19:45:46 +0530
 
 ---
+Steps to setup wake up on lan on a remote PC
 
-## Switching On a local/remote PC via terminal
 ### Setup
 I have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and **shut it down** when i'm not using it.
 ### Problem
