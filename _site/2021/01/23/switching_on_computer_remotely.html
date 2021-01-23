@@ -1,0 +1,317 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Switching On a local/remote PC via terminal - Personal Blog</title>
+<meta name="description" content="Switching On a local/remote PC via terminal Setup I have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and shut it down when i’m not using it. Problem I have to move my chair or get up and go to the system(5 steps way) to switch it on and I’m lazily to do that. Solution I observed that even when I shutdown the system the LED on the LAN port was glowing and after doing some research found that we can switch on the system remotely even if it is off. Wake on Lan (WOL) to the Rescue Using Wake on Lan you can switch on a system even when it is turned off. Given its plugged in and connected to LAN">
+
+
+  <meta name="author" content="Shabaz Ahmed">
+  
+  <meta property="article:author" content="Shabaz Ahmed">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Personal Blog">
+<meta property="og:title" content="Switching On a local/remote PC via terminal">
+<meta property="og:url" content="http://localhost:4000/2021/01/23/switching_on_computer_remotely.html">
+
+
+  <meta property="og:description" content="Switching On a local/remote PC via terminal Setup I have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and shut it down when i’m not using it. Problem I have to move my chair or get up and go to the system(5 steps way) to switch it on and I’m lazily to do that. Solution I observed that even when I shutdown the system the LED on the LAN port was glowing and after doing some research found that we can switch on the system remotely even if it is off. Wake on Lan (WOL) to the Rescue Using Wake on Lan you can switch on a system even when it is turned off. Given its plugged in and connected to LAN">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-23T19:45:46+05:30">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2021/01/23/switching_on_computer_remotely.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Shabaz Ahmed",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Personal Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
+<link rel="manifest" href="/assets/fav/site.webmanifest">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Personal Blog
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Switching On a local/remote PC via terminal">
+    <meta itemprop="description" content="Switching On a local/remote PC via terminalSetupI have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and shut it down when i’m not using it.ProblemI have to move my chair or get up and go to the system(5 steps way) to switch it on and I’m lazily to do that.SolutionI observed that even when I shutdown the system the LED on the LAN port was glowing and after doing some research found that we can switch on the system remotely even if it is off.Wake on Lan (WOL) to the RescueUsing Wake on Lan you can switch on a system even when it is turned off. Given its plugged in and connected to LAN">
+    <meta itemprop="datePublished" content="2021-01-23T19:45:46+05:30">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Switching On a local/remote PC via terminal
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="switching-on-a-localremote-pc-via-terminal">Switching On a local/remote PC via terminal</h2>
+<h3 id="setup">Setup</h3>
+<p>I have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and <strong>shut it down</strong> when i’m not using it.</p>
+<h3 id="problem">Problem</h3>
+<p>I have to move my chair or get up and go to the system(5 steps way) to switch it on and I’m lazily to do that.</p>
+<h3 id="solution">Solution</h3>
+<p>I observed that even when I shutdown the system the LED on the LAN port was glowing and after doing some research found that we can switch on the system remotely even if it is off.<br />
+<strong>Wake on Lan (WOL) to the Rescue</strong><br />
+Using Wake on Lan you can switch on a system even when it is turned off. Given its plugged in and connected to LAN</p>
+
+<p><strong>Server/PC configuration: Ubuntu 18.04 LTS</strong></p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">ip a</code> //get the ip broadcast and mac address for the interface ex: eno1 in my case</li>
+  <li><code class="language-plaintext highlighter-rouge">sudo ethtool -s eno1 wol g</code> //if not installed get it from apt</li>
+  <li>Create a service for WOL so that it persists across restarts
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">cd /etc/systemd/system</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo vi wol.service</code> use the code below replace eno1 with the correct interface name
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [Unit] 
+ Description=Configure Wake-up on LAN
+ [Service]
+ Type=oneshot
+ ExecStart=/sbin/ethtool -s eno1 wol g 
+ [Install]
+ WantedBy=basic.target
+</code></pre></div>        </div>
+      </li>
+      <li>Make the Service start with system
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> systemctl daemon-reload
+ systemctl enable wol.service
+ systemctl start wol.service
+</code></pre></div>        </div>
+        <p><strong>On the Laptop or other PC side</strong><br />
+I use MacBook so I installed <code class="language-plaintext highlighter-rouge">wakeonlan</code> from homebrew to send teh magic packet to wake the system. There are multiple tools for systems and even simple python script which so the same.</p>
+      </li>
+    </ol>
+  </li>
+  <li>Install wakeon lan <code class="language-plaintext highlighter-rouge">brew install wakeonlan</code></li>
+  <li>run the command <code class="language-plaintext highlighter-rouge">wakeonlan -i 192.168.0.255 -p 7 xx:xx:xx:xx:xx:xx</code></li>
+  <li>
+    <p>Optional add the above to an alias to make it easy to use</p>
+
+    <p>Note: <br />
+ ip <strong>not</strong> the system ip instead it is the braodcast address<br />
+ port is by default 7<br />
+ xx:xx:xx:xx:xx:xx = mac address of the remote system</p>
+  </li>
+</ol>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Thats it, now can sit on my chair for hours together. Which in the hindsight is not good for my back.</p>
+
+<p>Resources:<br />
+https://blog.yucas.net/2019/05/03/setting-up-wake-on-lan-on-ubuntu-server-18-04-lts/<br />
+https://apple.stackexchange.com/questions/95246/wake-other-computers-from-mac-osx</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-23T19:45:46+05:30">January 23, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2021/01/22/neural_networ.html" class="pagination--pager" title="Neural Networks From Ground Up
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="mailto:shabaz1729@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://build3r.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/shabazahmed_" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/build3r" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Shabaz Ahmed. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
