@@ -2,7 +2,7 @@ var store = [{
         "title": " Neural Networks From Ground Up",
         "excerpt":"Neural Networks Saw and amazing video by 3Blue1Brown. Where he introduces neural neyworks not as a black box but each neuron as a function which maps the input to the output. 1 - Intro Previously researchers used to sigmoid function as an activation function which apparently gave poor performance nowadays...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/2021/01/22/neural_networ.html",
+        "url": "http://localhost:4000/2021/01/22/neural_network.html",
         "teaser": null
       },{
         "title": "Switching On a local/remote PC via terminal",
