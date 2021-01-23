@@ -1,0 +1,137 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Personal Blog
+email: shabaz1729@gmail.com
+name: "Shabaz Ahmed"
+description: >- # this means to ignore newlines until "baseurl:"
+  Here I write about things I learn, the work I do and any hackathon projects.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "build3r.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: shabazahmed+
+github_username:  build3r
+repository: "build3r.github.io"
+words_per_minute: 200
+# Build settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum" "sunrise"
+plugins:
+  - jekyll-include-cache
+  - jekyll-seo-tag
+# SEO Related //TODO
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+kramdown:
+  hard_wrap: true
+
+# Site Author
+author:
+  name             : "Shabaz Ahmed"
+  avatar           : "/assets/images/dp_2021.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Bengaluru"
+  email            : "mailto:shabaz1729@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:shabaz1729@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://build3r.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/shabazahmed_"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/build3r"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   # url: "https://instagram.com/"
+footer:
+  name             : "Shabaz Ahmed"
+  avatar           : "/assets/images/dp_2021.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Bengaluru"
+  email            : "shabaz1729@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:shabaz1729@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://build3r.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/shabazahmed_"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/build3r"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   # url: "https://instagram.com/"
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
