@@ -2,7 +2,9 @@
 layout: single
 title:  "Neural Networks From Ground Up"
 date:   2021-01-22 19:45:46 +0530
-
+author_profile: true
+toc: true
+toc_label: "Contents"
 ---
 Saw and amazing [video](https://www.youtube.com/watch?v=aircAruvnKk) by 3Blue1Brown. Where he introduces neural neyworks not as a black box but each neuron as a function which maps the input to the output.
 

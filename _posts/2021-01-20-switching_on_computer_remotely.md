@@ -2,9 +2,13 @@
 layout: single
 title:  "Switching On a local/remote PC via terminal"
 date:   2021-01-23 19:45:46 +0530
-
+toc: true
+author_profile: true
+toc_label: "Index"
 ---
-Steps to setup wake up on lan on a remote PC
+Steps to setup wake up on lan on a remote PC 
+
+[Just show me solution](#solution)
 
 ### Setup
 I have a local PC having GPU which I use to run Machine Learning model and and some heavy, It only has a LAN port and is kept near to the router which is not next to my working desk. I mostly ssh into this system to use it and **shut it down** when i'm not using it.
@@ -36,17 +40,18 @@ Using Wake on Lan you can switch on a system even when it is turned off. Given i
         systemctl enable wol.service
         systemctl start wol.service
         ```
+
 **On the Laptop or other PC side**
-I use MacBook so I installed `wakeonlan` from homebrew to send teh magic packet to wake the system. There are multiple tools for systems and even simple python script which so the same.
+I use MacBook so I installed `wakeonlan` from homebrew to send the magic packet to wake the system. There are multiple tools for systems and even simple python script which do the same.
 
 1. Install wakeon lan `brew install wakeonlan`
 2. run the command `wakeonlan -i 192.168.0.255 -p 7 xx:xx:xx:xx:xx:xx`
 3. Optional add the above to an alias to make it easy to use
 
-    Note: 
-    ip **not** the system ip instead it is the braodcast address
-    port is by default 7
-    xx:xx:xx:xx:xx:xx = mac address of the remote system
+Note: 
+ip is **not** the system ip instead it is the broadcast address
+port is by default 7
+xx:xx:xx:xx:xx:xx = mac address of the remote system
 
 ### Conclusion
 Thats it, now can sit on my chair for hours together. Which in the hindsight is not good for my back.
