@@ -1,0 +1,7 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Fast-AI"
+    url: https://build3r.github.io/fastai
+  - title: "TIL"
+    url: https://github.com/build3r/TodayILearned/blob/master/README.md
