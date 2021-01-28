@@ -31,11 +31,23 @@ repository: "build3r.github.io"
 words_per_minute: 200
 # Build settings
 theme: minimal-mistakes-jekyll
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.21.0
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum" "sunrise"
 plugins:
   - jekyll-include-cache
-  
+#minal mistake's overrides
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: true
+      show_date: true
+      read_time: true
+      share: true
+search: true
+
 # SEO Related //TODO
 google_site_verification : "urddya_s4q20u_hav6nHd1i65jruWH_i1b_a-thMEV4"
 bing_site_verification   :
