@@ -18,14 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Personal Blog
+title: Shabaz Blog
+tagline: Shabaz's Personal Blog| Here I write about things I learn, the work I do and any hackathon projects.
 email: shabaz1729@gmail.com
 name: "Shabaz Ahmed"
 description: >- # this means to ignore newlines until "baseurl:"
   Here I write about things I learn, the work I do and any hackathon projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "build3r.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: shabazahmed+
+twitter:
+  username: shabazahmed_
+  card: summary
+twitter_username: shabazahmed_
 github_username:  build3r
 repository: "build3r.github.io"
 words_per_minute: 200
@@ -35,6 +39,7 @@ remote_theme: mmistakes/minimal-mistakes@4.21.0
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum" "sunrise"
 plugins:
   - jekyll-include-cache
+  - jekyll-sitemap
 #minal mistake's overrides
 defaults:
   # _posts
@@ -59,7 +64,7 @@ kramdown:
 author:
   name             : "Shabaz Ahmed"
   avatar           : "/assets/images/dp_2021.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Daily learner, serial hacker, Dreamer!"
   location         : "Bengaluru"
   email            : "mailto:shabaz1729@gmail.com"
   links:
@@ -81,7 +86,7 @@ author:
 footer:
   name             : "Shabaz Ahmed"
   avatar           : "/assets/images/dp_2021.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Daily learner, serial hacker, Dreamer!"
   location         : "Bengaluru"
   email            : "shabaz1729@gmail.com"
   links:
