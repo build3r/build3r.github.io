@@ -1,3 +1,11 @@
+---
+layout: single
+title:  "Resources for Hackathons and Competitions"
+date: 2021-05-17 09:00:21 PM
+toc: true
+author_profile: true
+toc_label: "Index"
+---
 ## Resources for Hackathons and Competitions
 
 ### Websites
