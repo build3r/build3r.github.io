@@ -273,6 +273,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-feed
   jekyll-sitemap
   minimal-mistakes-jekyll
   tzinfo (~> 1.2)
