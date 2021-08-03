@@ -21,10 +21,10 @@ B = Bias matrix
 Here we learn about the cost function which calculates how well an algorithm is doing. And use it to give feedaback to our network.
 
 ### 3 - Working of Back Propagation
-In the second video we learn about the structure of neural and network and how it is intialised. Also how the cosr function is use to nudge the weighta and biases to reac he local minima using the negative gradient descent (equivalent to slope on an 2D plane). In practice we use Schotastic Gradient Descent (SGD)
+In the second video we learn about the structure of neural and network and how it is intialised. Also how the cost function is used to nudge the weights and biases to reach the local minima using the negative gradient descent (equivalent to slope on an 2D plane). In practice we use Schotastic Gradient Descent (SGD)
 
 ### 4 - Back Propagation Calaculus
-Here we devel deep into the math of calculating the SGD using calculus. I might need to re-learn calculus to completely comphrend this.
+Here we dwell deep into the math of calculating the SGD using calculus. I might need to re-learn calculus to completely comphrend this.
 The final formula for single neuron:
 <img src="/assets/images/single_neuron_formula.png" alt="single" style="zoom:50%;" />
 
