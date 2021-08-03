@@ -20,6 +20,6 @@ toc_label: "Index"
 9. [1729](https://1729.com/all/): Challenges, with crypto as prize.
 10. [Karntaka Startups](https://startup.karnataka.gov.in/): Programs and Challenges hosted by Government of karnataka, good prize money, easy wins. But most them are for startups.
 
-## Resources:
+### Resources:
 1. [Devpost gallery](https://devpost.com/software): Can see past winner, really good for inspiration.
 2. [Product Hunt](https://www.producthunt.com/): Isnpiration for live products.
