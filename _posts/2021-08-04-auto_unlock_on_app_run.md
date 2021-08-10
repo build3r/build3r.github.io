@@ -45,7 +45,7 @@ else
   echo "There should be only one device connected at a time"
 fi
 
-return 0
+exit 0
 
 ```
 
