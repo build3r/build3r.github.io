@@ -60,6 +60,10 @@ search: true
 google_site_verification : "urddya_s4q20u_hav6nHd1i65jruWH_i1b_a-thMEV4"
 bing_site_verification   :
 yandex_site_verification :
+
+#analytics
+google_analytics: G-V25G66STK3
+
 kramdown:
   hard_wrap: true
 
